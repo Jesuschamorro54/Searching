@@ -2,6 +2,109 @@
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/bg_blue">
 
+    >
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/bg_blue"
+        android:gravity="center"
+        android:orientation="vertical"
+        >
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:drawableLeft="@drawable/usericono"
+            android:fontFamily="@font/robotomedium"
+            android:padding="32dp"
+            android:text="INICIAR SESIÓN "
+            android:textAlignment="center"
+            android:textColor="@color/white"
+            android:textSize="33sp" />
+
+        <LinearLayout
+            android:layout_width="367dp"
+            android:layout_height="396dp"
+            android:background="@drawable/box_container"
+            android:gravity="center"
+            android:orientation="vertical"
+
+
+            >
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/robotomedium"
+                android:paddingLeft="30dp"
+                android:paddingBottom="9dp"
+                android:text="Usuario"
+                android:textAlignment="viewStart"
+                android:textColor="#959595"
+                android:textSize="16sp"
+
+
+                />
+
+            <EditText
+                android:id="@+id/user"
+                android:layout_width="316dp"
+                android:layout_height="50dp"
+                android:background="@drawable/custom_edittetext"
+                android:hint="ramosflorezv@gmail.com"
+                android:padding="15dp"
+                android:textColor="@color/black"
+                android:textColorHint="#BFBBBB" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/robotomedium"
+                android:paddingLeft="30dp"
+                android:paddingTop="9dp"
+                android:text="Contraseña"
+                android:textAlignment="viewStart"
+                android:textColor="#959595"
+                android:textSize="16sp"
+
+
+                />
+
+            <EditText
+                android:id="@+id/password"
+                android:layout_width="316dp"
+                android:layout_height="50dp"
+                android:layout_marginTop="9dp"
+                android:background="@drawable/custom_edittetext"
+                android:hint="**********"
+                android:padding="15dp"
+                android:password="true"
+                android:textColor="@color/black"
+                android:textColorHint="#BFBBBB" />
+
+            <Button
+                android:id="@+id/button_login"
+                style="?android:attr/borderlessButtonStyle"
+                android:layout_width="181dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="19dp"
+                android:background="@drawable/button"
+                android:fontFamily="@font/robotomedium"
+                android:onClick="sendMessage"
+                android:text="ACCEDER"
+                android:textColor="@color/white" />
+            <TextView
+                android:id="@+id/forgot_password"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="¿Olvidó su contraseña?"
+                android:textColor="@color/gris_preferente"
+                android:textStyle="bold"
+                android:layout_marginTop="18dp"
+                android:clickable="true"
+                />
+
+        </LinearLayout>
+    </LinearLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>
