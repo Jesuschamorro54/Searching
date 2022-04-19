@@ -10,6 +10,9 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Searching">
         <activity
+            android:name=".activity_chat_general"
+            android:exported="false" />
+        <activity
             android:name=".MainActivity"
             android:exported="true">
             <intent-filter>
