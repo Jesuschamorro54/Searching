@@ -1,7 +1,8 @@
 package com.example.searching
 
-import androidx.appcompat.app.AppCompatActivity
+
 import android.os.Bundle
+import androidx.appcompat.app.AppCompatActivity
 
 class activity_chat_general : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
