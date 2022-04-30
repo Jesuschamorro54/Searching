@@ -40,10 +40,10 @@
         android:orientation="horizontal"
         android:layout_margin="10sp">
 
-        <LinearLayout
-            android:layout_width="48sp"
-            android:layout_height="48sp"
-            android:foreground="@drawable/foto_perfil" />
+        <ImageView
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:background="@drawable/imagen"/>
 
         <LinearLayout
             android:layout_width="wrap_content"
@@ -89,10 +89,10 @@
             android:layout_height="wrap_content"
             android:orientation="horizontal" >
 
-            <LinearLayout
-                android:layout_width="48sp"
-                android:layout_height="48sp"
-                android:foreground="@drawable/foto_perfil" />
+            <ImageView
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:background="@drawable/imagen"/>
 
         </LinearLayout>
 
@@ -140,10 +140,10 @@
             android:layout_height="wrap_content"
             android:orientation="horizontal" >
 
-            <LinearLayout
-                android:layout_width="48sp"
-                android:layout_height="48sp"
-                android:foreground="@drawable/foto_perfil" />
+            <ImageView
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:background="@drawable/imagen"/>
 
         </LinearLayout>
 
@@ -191,11 +191,10 @@
             android:layout_height="wrap_content"
             android:orientation="horizontal" >
 
-            <LinearLayout
-                android:layout_width="48sp"
-                android:layout_height="48sp"
-                android:foreground="@drawable/foto_perfil" />
-
+            <ImageView
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:background="@drawable/imagen"/>
         </LinearLayout>
 
         <LinearLayout

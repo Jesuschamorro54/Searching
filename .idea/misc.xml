@@ -4,10 +4,15 @@
     <option name="filePathToZoomLevelMap">
       <map>
         <entry key="..\:/Users/LuisFernando/AndroidStudioProjects/Searching/app/src/main/res/drawable/background_blue.xml" value="0.2115" />
+        <entry key="..\:/Users/LuisFernando/AndroidStudioProjects/Searching/app/src/main/res/drawable/chat_privado_azul_background.xml" value="0.1875" />
+        <entry key="..\:/Users/LuisFernando/AndroidStudioProjects/Searching/app/src/main/res/drawable/chat_privado_background.xml" value="0.1875" />
+        <entry key="..\:/Users/LuisFernando/AndroidStudioProjects/Searching/app/src/main/res/drawable/escribir_background.xml" value="0.1875" />
         <entry key="..\:/Users/LuisFernando/AndroidStudioProjects/Searching/app/src/main/res/drawable/ic_launcher_background.xml" value="0.2115" />
+        <entry key="..\:/Users/LuisFernando/AndroidStudioProjects/Searching/app/src/main/res/drawable/imagen.xml" value="0.1875" />
+        <entry key="..\:/Users/LuisFernando/AndroidStudioProjects/Searching/app/src/main/res/drawable/imagen_circular.xml" value="0.1875" />
         <entry key="..\:/Users/LuisFernando/AndroidStudioProjects/Searching/app/src/main/res/drawable/searchview_background.xml" value="0.1" />
         <entry key="..\:/Users/LuisFernando/AndroidStudioProjects/Searching/app/src/main/res/layout/activity_chat_general.xml" value="0.25" />
-        <entry key="..\:/Users/LuisFernando/AndroidStudioProjects/Searching/app/src/main/res/layout/activity_chat_personal.xml" value="0.33" />
+        <entry key="..\:/Users/LuisFernando/AndroidStudioProjects/Searching/app/src/main/res/layout/activity_chat_personal.xml" value="0.25" />
         <entry key="..\:/Users/LuisFernando/AndroidStudioProjects/Searching/app/src/main/res/layout/activity_main.xml" value="0.20416666666666666" />
         <entry key="..\:/Users/LuisFernando/AndroidStudioProjects/Searching/app/src/main/res/mipmap-anydpi-v26/ic_launcher.xml" value="0.2115" />
       </map>
