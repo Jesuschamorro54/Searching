@@ -10,7 +10,7 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Searching">
         <activity
-            android:name=".SingUp"
+            android:name=".PasswordReset"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
