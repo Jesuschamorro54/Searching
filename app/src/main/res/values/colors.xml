@@ -11,4 +11,6 @@
     <color name="segundo_azul">#03A9F4</color>
     <color name="tercer_azul">#B3E5FC</color>
     <color name="gris_preferente">#959595</color>
+    <color name="cuarto_azul">#B6DDEF</color>
+    <color name="gris_claro">#CFCFCF</color>
 </resources>
