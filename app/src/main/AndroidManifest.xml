@@ -9,13 +9,30 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.Searching">
-        <activity android:name=".MainActivityPerdidos"
-            android:exported="true"/>
+        <activity
+            android:name=".MenuView"
+            android:exported="true" />
+
+        <activity
+            android:name=".activity_chat_personal"
+            android:exported="true" />
+
+        <activity
+            android:name=".MainActivityPerdidos"
+            android:exported="true" />
+        <activity
+            android:name=".Login"
+            android:exported="true" />
+        <activity
+            android:name=".SingUp"
+            android:exported="true" />
+
         <meta-data
             android:name="com.google.android.geo.API_KEY"
             android:value="@string/google_maps_key" />
+
         <activity
-            android:name=".PasswordReset"
+            android:name=".MainActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

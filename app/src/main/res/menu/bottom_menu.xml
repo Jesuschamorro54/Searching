@@ -24,6 +24,4 @@
         android:title="Notificaciones"
         android:icon="@drawable/ic_baseline_notifications_24"
         />
-
-
 </menu>

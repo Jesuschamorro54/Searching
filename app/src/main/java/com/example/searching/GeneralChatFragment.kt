@@ -2,6 +2,6 @@ package com.example.searching
 
 import androidx.fragment.app.Fragment
 
-class MapViewFragment : Fragment(R.layout.fragment_map_view) {
+class GeneralChatFragment : Fragment(R.layout.fragment_general_chat) {
 
 }

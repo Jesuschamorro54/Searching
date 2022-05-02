@@ -1,11 +1,13 @@
 package com.example.searching
 
+import android.app.Activity
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
+import androidx.fragment.app.Fragment
 import androidx.recyclerview.widget.LinearLayoutManager
-import kotlinx.android.synthetic.main.list_perdidos.*
+import kotlinx.android.synthetic.main.fragment_home.*
 
-class MainActivityPerdidos : AppCompatActivity() {
+class HomeFragment : Fragment(R.layout.fragment_home) {
     val perdidos = listOf(
         ListaPerdidos("julian","cachorro pequeño","perro mediano de color gris,de patita fracturada","https://www.caninoviajero.es/wp-content/uploads/2020/06/razas-de-perros-grises.jpg"),
         ListaPerdidos("julian","perrito negro,pequeño","los almendros","https://rockcontent.com/es/wp-content/uploads/sites/3/2019/02/Consejos-para-hacer-ima%CC%81genes-increi%CC%81bles-1024x538.png"),
@@ -16,17 +18,14 @@ class MainActivityPerdidos : AppCompatActivity() {
         ListaPerdidos("julian","cachorro pequeño","perro mediano de color gris,de patita fracturada","https://apadrinaunperro.org/wp-content/uploads/2022/02/razas-de-perros-pequenos-960x500.jpg")
     )
 
-
-
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.list_perdidos)
         initRecycler()
     }
 
     fun initRecycler(){
-        rvlista1.layoutManager= LinearLayoutManager(this)
+        // rvlista.layoutManager= LinearLayoutManager(this)
         val adapter=PerdidosAdapter(perdidos)
-        rvlista1.adapter=adapter
+        rvlista.adapter=adapter
     }
 }
