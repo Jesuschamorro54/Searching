@@ -1,13 +1,11 @@
 <resources>
 
-    <string name="app_name">Searching</string>
-    
     <string name="select">Seleccionar</string>
     <string-array name="publication_type">
         <item>PERSONA</item>
         <item>MASCOTA</item>
     </string-array>
-    
+
     <string name="android_sdk_places_api_key">AIzaSyA_tAzyp_fFfVaQUC-PNIqCdLp217cxzfo</string>
     <string name="labelfrom">DIRECCIÓN</string>
 
