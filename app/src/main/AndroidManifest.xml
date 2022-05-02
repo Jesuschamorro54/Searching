@@ -10,6 +10,9 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Searching">
         <activity
+            android:name=".Report"
+            android:exported="true" />
+        <activity
             android:name=".MenuView"
             android:exported="true" />
 
