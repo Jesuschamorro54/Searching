@@ -1,11 +1,5 @@
 <resources>
 
-    <string name="select">Seleccionar</string>
-    <string-array name="publication_type">
-        <item>PERSONA</item>
-        <item>MASCOTA</item>
-    </string-array>
-
     <string name="android_sdk_places_api_key">AIzaSyA_tAzyp_fFfVaQUC-PNIqCdLp217cxzfo</string>
     <string name="labelfrom">DIRECCIÓN</string>
 
@@ -14,5 +8,9 @@
     <string name="app_name">CHAT</string>
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string-array name="options_array">
+        <item>Persona</item>
+        <item>Mascota</item>
+    </string-array>
 
 </resources>
