@@ -13,4 +13,10 @@
         <item>Mascota</item>
     </string-array>
 
+    <string-array name="options_list">
+        <item>Todos</item>
+        <item>Persona</item>
+        <item>Mascota</item>
+    </string-array>
+
 </resources>

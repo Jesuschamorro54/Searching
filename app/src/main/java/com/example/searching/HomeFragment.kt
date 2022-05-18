@@ -1,5 +1,4 @@
 package com.example.searching
-
 import android.app.Activity
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
@@ -21,6 +20,7 @@ class HomeFragment : Fragment(R.layout.fragment_home) {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         initRecycler()
+
     }
 
     fun initRecycler(){
