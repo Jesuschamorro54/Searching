@@ -1,9 +1,11 @@
 package com.example.searching
 
 import android.os.Bundle
+import android.widget.ArrayAdapter
+import android.widget.Spinner
 import androidx.appcompat.app.AppCompatActivity
 import androidx.recyclerview.widget.LinearLayoutManager
-import kotlinx.android.synthetic.main.list_perdidos.*
+import kotlinx.android.synthetic.main.fragment_home.*
 
 class MainActivityPerdidos : AppCompatActivity() {
     val perdidos = listOf(
@@ -20,13 +22,23 @@ class MainActivityPerdidos : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.list_perdidos)
+        setContentView(R.layout.fragment_home)
         initRecycler()
+
+       val spinner = findViewById<Spinner>(R.id.spinner_list_options)
+        ArrayAdapter.createFromResource(
+            this,
+            R.array.options_list,
+            android.R.layout.simple_spinner_item
+        ).also { adapter ->
+            adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item)
+            spinner.adapter = adapter
+        }
     }
 
     fun initRecycler(){
-        rvlista1.layoutManager= LinearLayoutManager(this)
+        rvlista.layoutManager= LinearLayoutManager(this)
         val adapter=PerdidosAdapter(perdidos)
-        rvlista1.adapter=adapter
+        rvlista.adapter=adapter
     }
 }

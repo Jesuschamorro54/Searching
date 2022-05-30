@@ -1,10 +1,13 @@
 package com.example.searching
 import android.os.Bundle
+import android.view.View
+import android.widget.AdapterView
 import android.widget.ArrayAdapter
 import android.widget.AutoCompleteTextView
+import android.widget.Spinner
 import androidx.appcompat.app.AppCompatActivity
 
-class Report : AppCompatActivity() {
+class Report : AppCompatActivity(), AdapterView.OnItemSelectedListener {
 
     companion object{
         private const val DIRECCION_REQUEST_CODE = 1
@@ -15,11 +18,26 @@ class Report : AppCompatActivity() {
         setContentView(R.layout.report)
 
         // SELECT
-        val select = findViewById<AutoCompleteTextView>(R.id.autoTextView);
-        val publication_type = resources.getStringArray(R.array.publication_type);
-        val adapter = ArrayAdapter(this, android.R.layout.simple_list_item_1, publication_type);
-        select.setAdapter(adapter)
+        val spinner=findViewById<Spinner>(R.id.spinner_options)
+        ArrayAdapter.createFromResource(
+            this,
+            R.array.options_array,
+            android.R.layout.simple_spinner_item
+        ).also { adapter ->
+            adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item)
+            spinner.adapter = adapter
+        }
+
     }
 
+    // LOGICA DEL ITEM SELECCIONADO
+    override fun onItemSelected(parent: AdapterView<*>, view: View?, pos: Int, id: Long) {
+        // An item was selected. You can retrieve the selected item using
+        // parent.getItemAtPosition(pos)
+    }
+
+    override fun onNothingSelected(parent: AdapterView<*>) {
+        // Another interface callback
+    }
 
 }
