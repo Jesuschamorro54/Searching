@@ -19,7 +19,8 @@ class MenuView : AppCompatActivity(), OnMapReadyCallback  {
         createDefaultFragment()
 
         val bottomNavigationView = findViewById<BottomNavigationView>(R.id.bottomNavigationView)
-        val reportView = Intent(this, Report::class.java)
+        // val reportView = Intent(this, Report::class.java)
+        val reportView = ReportFragment()
         val homeView = Intent(this, MainActivityPerdidos::class.java)
         val mapView = MapViewFragment()
         val generalChat = GeneralChatFragment()
@@ -32,7 +33,7 @@ class MenuView : AppCompatActivity(), OnMapReadyCallback  {
                     true
                 }
                 R.id.nav_add -> {
-                    changedView(reportView)
+                    setCurrentFragment(reportView)
                     true
                 }
                 R.id.nav_messages -> {
