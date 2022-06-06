@@ -22,14 +22,14 @@ class MenuView : AppCompatActivity(), OnMapReadyCallback  {
         val reportView = ReportFragment()
         val generalChat = GeneralChatFragment()
         val mapView = MapViewFragment()
-        // val home = HomeFragment()
+        val home = HomeFragment()
 
-        val homeView = Intent(this, MainActivityPerdidos::class.java)
+
 
         bottomNavigationView.setOnNavigationItemSelectedListener {
             when(it.itemId){
                 R.id.nav_home -> {
-                    changedView(homeView)  // Aquí se carga la vista que se quiere
+                    setCurrentFragment(home)  // Aquí se carga la vista que se quiere
                     true
                 }
                 R.id.nav_add -> {
@@ -49,6 +49,11 @@ class MenuView : AppCompatActivity(), OnMapReadyCallback  {
         }
     }
 
+    private fun createDefaultFragment() {
+        val home = HomeFragment()
+        setCurrentFragment(home)
+    }
+
     private fun setCurrentFragment(fragment: Fragment) {
         supportFragmentManager.beginTransaction().apply {
             replace(R.id.containerView, fragment)
@@ -60,10 +65,6 @@ class MenuView : AppCompatActivity(), OnMapReadyCallback  {
         startActivity(view)
     }
 
-    private fun createDefaultFragment() {
-        val generalChat = GeneralChatFragment()
-        setCurrentFragment(generalChat)
-    }
 
     override fun onMapReady(googleMap: GoogleMap) {
         map = googleMap
