@@ -19,12 +19,12 @@ class MenuView : AppCompatActivity(), OnMapReadyCallback  {
         createDefaultFragment()
 
         val bottomNavigationView = findViewById<BottomNavigationView>(R.id.bottomNavigationView)
-        // val reportView = Intent(this, Report::class.java)
         val reportView = ReportFragment()
-        val homeView = Intent(this, MainActivityPerdidos::class.java)
-        val mapView = MapViewFragment()
         val generalChat = GeneralChatFragment()
-        val home = HomeFragment()
+        val mapView = MapViewFragment()
+        // val home = HomeFragment()
+
+        val homeView = Intent(this, MainActivityPerdidos::class.java)
 
         bottomNavigationView.setOnNavigationItemSelectedListener {
             when(it.itemId){
@@ -38,6 +38,10 @@ class MenuView : AppCompatActivity(), OnMapReadyCallback  {
                 }
                 R.id.nav_messages -> {
                     setCurrentFragment(generalChat)
+                    true
+                }
+                R.id.nav_map -> {
+                    setCurrentFragment(mapView)
                     true
                 }
                 else -> false
