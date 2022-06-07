@@ -1,14 +1,17 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    tools:context=".ReportFragment">
 
+    <!-- TODO: Update blank fragment layout -->
     <LinearLayout
         android:id="@+id/linearLayout"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
+        android:layout_marginEnd="15dp"
+        android:layout_marginStart="15dp"
         android:gravity="center"
         android:orientation="vertical">
 
@@ -25,7 +28,8 @@
                 android:layout_width="82dp"
                 android:layout_height="72dp"
                 android:src="@drawable/photo_user"
-                tools:ignore="MissingConstraints" />
+                tools:ignore="MissingClass,MissingConstraints"
+                android:orientation="horizontal" />
 
             <TextView
                 android:id="@+id/textView_name"
@@ -60,22 +64,12 @@
                     android:textColorHint="#0C0C0C"
                     android:textSize="18dp" />
 
-                <com.google.android.material.textfield.TextInputLayout
-                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.ExposedDropdownMenu"
+                <Spinner
+                    android:id="@+id/spinner_options"
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_below="@id/textView_type"
-                    android:layout_alignParentLeft="true"
-                    android:layout_margin="10dp"
-                    android:layout_toLeftOf="@+id/times"
-                    android:hint="@string/select"
-                    android:theme="@style/TextInputLayoutStyle">
+                    android:layout_height="45dp"
+                    style="@style/spinner_style"/>
 
-                    <AutoCompleteTextView
-                        android:id="@+id/autoTextView"
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent" />
-                </com.google.android.material.textfield.TextInputLayout>
             </LinearLayout>
 
             <LinearLayout
@@ -95,7 +89,7 @@
                 <EditText
                     android:id="@+id/input_location"
                     android:inputType="text"
-                    android:layout_width="410dp"
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center"
                     android:drawableRight="@drawable/location_icon"
@@ -121,7 +115,7 @@
 
                 <EditText
                     android:id="@+id/features"
-                    android:layout_width="410dp"
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center"
                     android:hint="Niño de 8 años"
@@ -145,7 +139,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
-                        app:srcCompat="@drawable/news_image" />
+                        />
                 </LinearLayout>
 
                 <LinearLayout
@@ -196,9 +190,9 @@
                 android:layout_weight="1"
                 android:text="PUBLICAR"
                 android:backgroundTint="@color/inputColor"
-                app:cornerRadius="20dp"/>
+                />
         </LinearLayout>
 
     </LinearLayout>
 
-</androidx.coordinatorlayout.widget.CoordinatorLayout>
+</FrameLayout>
