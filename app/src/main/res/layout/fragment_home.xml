@@ -1,9 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<FrameLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
-
+    android:layout_height="match_parent"
+    tools:context=".HomeFragment">
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -14,28 +15,22 @@
         tools:ignore="MissingConstraints">
 
 
-        <RelativeLayout
+        <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="54dp"
+            android:layout_height="68dp"
             android:layout_margin="16dp"
             android:background="@drawable/bg_with_radius"
             android:orientation="horizontal">
 
+            <Spinner
+                android:id="@+id/spinner_list_options"
+                style="@style/spinner_style"
+                android:layout_width="171dp"
+                android:layout_height="match_parent" />
 
-            <com.google.android.material.textfield.TextInputLayout
-                android:layout_width="169dp"
-                android:layout_height="34dp"
-                android:layout_marginTop="5dp"
-                android:layout_marginLeft="10dp"
-                android:hint="hola"
-                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense.ExposedDropdownMenu">
 
-                <AutoCompleteTextView
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content">
 
-                </AutoCompleteTextView>
-            </com.google.android.material.textfield.TextInputLayout>
+
 
             <SearchView
                 android:layout_width="150dp"
@@ -48,7 +43,7 @@
                 android:background="@drawable/background_search" />
 
 
-        </RelativeLayout>
+        </LinearLayout>
 
         <androidx.recyclerview.widget.RecyclerView
             android:id="@+id/rvlista"
@@ -59,4 +54,5 @@
         </androidx.recyclerview.widget.RecyclerView>
 
     </LinearLayout>
-</androidx.constraintlayout.widget.ConstraintLayout>
+
+</FrameLayout>

@@ -27,10 +27,6 @@ class PerdidosAdapter(val listaPerdidos: List<ListaPerdidos>): RecyclerView.Adap
             view.tvDescripciontt.text=listaPerdidos.descripciontt
             view.tvDescripcion.text=listaPerdidos.descripcion
             Picasso.get().load(listaPerdidos.imagen).into(view.ivPerdidos)
-
-
-
-
         }
     }
 }
