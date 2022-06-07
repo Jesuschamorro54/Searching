@@ -1,60 +1,28 @@
 package com.example.searching
 
+import android.annotation.SuppressLint
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.widget.Button
-import androidx.fragment.app.Fragment
-import androidx.fragment.app.FragmentManager
-import com.google.android.gms.maps.GoogleMap
-import com.google.android.gms.maps.OnMapReadyCallback
-import com.google.android.gms.maps.SupportMapFragment
-import com.google.android.material.bottomnavigation.BottomNavigationMenuView
-import com.google.android.material.bottomnavigation.BottomNavigationView
+import android.widget.TextView
 
-class MainActivity : AppCompatActivity(), OnMapReadyCallback {
-    private lateinit var map: GoogleMap
+class MainActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
-        val bottomNavigationView = findViewById<BottomNavigationView>(R.id.bottomNavigationView)
 
-        //createMapFragment()
-        val mapView = MapViewFragment()
-        bottomNavigationView.setOnNavigationItemSelectedListener {
-            when(it.itemId){
-                R.id.nav_home -> {
-                    setCurrentFragment(mapView)  // Aquí se carga la vista que se quiere
-                    true
-                }
-                R.id.nav_add -> {
-                    setCurrentFragment(mapView)
-                    true
-                }
-                R.id.nav_messages -> {
-                    setCurrentFragment(mapView)
-                    true
-                }
-                else -> false
-            }
+        val login_link = this.findViewById<TextView>(R.id.login_link)
+        val create_acount = this.findViewById<TextView>(R.id.createAcount_link)
+
+        login_link.setOnClickListener {
+            val loginView = Intent(this, Login::class.java)
+            startActivity(loginView)
         }
 
-    }
-
-    private fun setCurrentFragment(fragment: Fragment) {
-        supportFragmentManager.beginTransaction().apply {
-            replace(R.id.containerView, fragment)
-            commit()
+        create_acount.setOnClickListener {
+            val sing_upView = Intent(this, SingUp::class.java)
+            startActivity(sing_upView)
         }
-    }
-
-    private fun createMapFragment() {
-        val mapFragment = supportFragmentManager.findFragmentById(R.id.fragmentMap) as SupportMapFragment
-        mapFragment.getMapAsync(this)
-    }
-
-    override fun onMapReady(googleMap: GoogleMap) {
-        map = googleMap
     }
 }
