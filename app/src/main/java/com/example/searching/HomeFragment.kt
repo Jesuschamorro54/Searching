@@ -13,6 +13,7 @@ import android.widget.Spinner
 import androidx.recyclerview.widget.RecyclerView
 
 
+
 class HomeFragment : Fragment(R.layout.fragment_home) {
 
     private var layoutManager: RecyclerView.LayoutManager? = null
@@ -64,6 +65,7 @@ class HomeFragment : Fragment(R.layout.fragment_home) {
             // set the custom adapter to the RecyclerView
             adapter = PerdidosAdapter(perdidos)
         }
+
     }
 
 

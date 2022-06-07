@@ -9,6 +9,9 @@ import com.google.android.gms.maps.GoogleMap
 import com.google.android.gms.maps.OnMapReadyCallback
 import com.google.android.material.bottomnavigation.BottomNavigationView
 import kotlinx.android.synthetic.main.fragment_general_chat.*
+enum class ProviderType{
+    BASIC
+}
 
 class MenuView : AppCompatActivity(), OnMapReadyCallback  {
     private lateinit var map: GoogleMap

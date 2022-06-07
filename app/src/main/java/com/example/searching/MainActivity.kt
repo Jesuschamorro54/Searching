@@ -1,10 +1,15 @@
 package com.example.searching
 
 import android.annotation.SuppressLint
+import android.content.Context
 import android.content.Intent
+import android.content.SharedPreferences
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.TextView
+import androidx.core.content.edit
+
+
 
 class MainActivity : AppCompatActivity() {
 
@@ -24,5 +29,9 @@ class MainActivity : AppCompatActivity() {
             val sing_upView = Intent(this, SingUp::class.java)
             startActivity(sing_upView)
         }
+
+
+
+
     }
 }
