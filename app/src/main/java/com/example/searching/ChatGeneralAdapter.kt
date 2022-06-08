@@ -7,7 +7,7 @@ import androidx.recyclerview.widget.RecyclerView
 import com.squareup.picasso.Picasso
 import kotlinx.android.synthetic.main.items_chat.view.*
 
-class ChatGeneralAdapter(val listachatgeneral:List<ListaChatGeneral>):RecyclerView.Adapter<ChatGeneralAdapter.ChatHolder>(){
+class ChatGeneralAdapter(val listachatgeneral:ArrayList<ListaChatGeneral>):RecyclerView.Adapter<ChatGeneralAdapter.ChatHolder>(){
 
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ChatHolder {

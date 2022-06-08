@@ -5,13 +5,18 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.LinearLayout
 import androidx.fragment.app.Fragment
+import androidx.recyclerview.widget.LinearLayoutManager
+import androidx.recyclerview.widget.RecyclerView
 import com.google.android.gms.maps.GoogleMap
 import com.google.android.gms.maps.OnMapReadyCallback
 import com.google.android.material.bottomnavigation.BottomNavigationView
+import com.google.firebase.database.*
 import kotlinx.android.synthetic.main.fragment_general_chat.*
 
 class MenuView : AppCompatActivity(), OnMapReadyCallback  {
     private lateinit var map: GoogleMap
+
+
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -29,10 +34,14 @@ class MenuView : AppCompatActivity(), OnMapReadyCallback  {
         bottomNavigationView.setOnNavigationItemSelectedListener {
             when(it.itemId){
                 R.id.nav_home -> {
+
+
                     setCurrentFragment(home)  // Aquí se carga la vista que se quiere
                     true
                 }
                 R.id.nav_add -> {
+
+
                     setCurrentFragment(reportView)
                     true
                 }
@@ -48,6 +57,8 @@ class MenuView : AppCompatActivity(), OnMapReadyCallback  {
             }
         }
     }
+
+
 
     private fun createDefaultFragment() {
         val home = HomeFragment()
