@@ -2,6 +2,12 @@
 
     <string name="android_sdk_places_api_key">AIzaSyA_tAzyp_fFfVaQUC-PNIqCdLp217cxzfo</string>
     <string name="labelfrom">DIRECCIÓN</string>
+
+    <string name="facebook_app_id">5632483716785324</string>
+    <string name="fb_login_protocol_scheme">fb1234</string>
+    <string name="facebook_client_token">6c1bdf1d6833ce429e118272df142b28</string>
+
+
     <string name="prefs_file">com.example.searching.PREFERENCE_FILE_KEY</string>
     <string name="iniciar_sesi_n">INICIAR SESIÓN</string>
     <string name="usuario">Usuario</string>
