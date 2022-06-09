@@ -15,13 +15,19 @@ import kotlinx.android.synthetic.main.fragment_general_chat.*
 
 class MenuView : AppCompatActivity(), OnMapReadyCallback  {
     private lateinit var map: GoogleMap
+  
+    private var user = ""
 
 
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_menu_view)
+
+        intent.getStringExtra("user")?.let {user = it}
+
         createDefaultFragment()
+
 
         val bottomNavigationView = findViewById<BottomNavigationView>(R.id.bottomNavigationView)
         val reportView = ReportFragment()
@@ -29,27 +35,33 @@ class MenuView : AppCompatActivity(), OnMapReadyCallback  {
         val mapView = MapViewFragment()
         val home = HomeFragment()
 
-
-
         bottomNavigationView.setOnNavigationItemSelectedListener {
             when(it.itemId){
                 R.id.nav_home -> {
 
+                    // TODO EN ESTA SECCIÓN AGREGAN EL CODIGO PARA PASAR LOS PARAMETROS
+                    // here
+                    //TODO: FIN
 
                     setCurrentFragment(home)  // Aquí se carga la vista que se quiere
                     true
                 }
                 R.id.nav_add -> {
 
+                    // TODO EN ESTA SECCIÓN AGREGAN EL CODIGO PARA PASAR LOS PARAMETROS
+                    // here
+                    //TODO: FIN
 
                     setCurrentFragment(reportView)
                     true
                 }
                 R.id.nav_messages -> {
+
                     var args = Bundle()
                     args.putString("user", "ofelondo@hotmail.com")
 
                     generalChat.arguments = args
+                  
                     setCurrentFragment(generalChat)
                     true
                 }
