@@ -23,15 +23,12 @@
             android:textSize="20sp"
             android:textStyle="bold"/>
 
-        <EditText
+        <SearchView
             android:layout_width="match_parent"
             android:layout_height="31dp"
             android:layout_marginLeft="10dp"
             android:layout_marginRight="10dp"
-            android:background="@drawable/searchview_background"
-            android:drawableStart="@drawable/search_icon"
-            android:paddingStart="10sp"
-            tools:ignore="RtlSymmetry" />
+            android:background="@drawable/searchview_background" />
 
     </LinearLayout>
 
