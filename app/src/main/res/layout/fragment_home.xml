@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".HomeFragment">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        tools:layout_editor_absoluteX="1dp"
+        tools:layout_editor_absoluteY="1dp"
+        tools:ignore="MissingConstraints">
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="68dp"
+            android:layout_margin="16dp"
+            android:background="@drawable/bg_with_radius"
+            android:orientation="horizontal">
+
+            <Spinner
+                android:id="@+id/spinner_list_options"
+                style="@style/spinner_style2"
+                android:layout_width="171dp"
+
+                android:layout_height="match_parent" />
+
+
+
+
+
+            <SearchView
+                android:layout_width="150dp"
+                android:layout_height="wrap_content"
+
+                android:layout_alignParentEnd="true"
+                android:layout_marginTop="9dp"
+                android:layout_marginEnd="19dp"
+                android:layout_marginRight="50dp"
+                android:background="@drawable/background_search" />
+
+
+        </LinearLayout>
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rvlista"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+
+        </androidx.recyclerview.widget.RecyclerView>
+
+    </LinearLayout>
+
+</FrameLayout>

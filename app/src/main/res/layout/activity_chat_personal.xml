@@ -1,0 +1,167 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ChatPersonal"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="75dp"
+        android:background="@drawable/background_blue"
+        android:orientation="horizontal">
+
+        <LinearLayout
+            android:layout_width="28dp"
+            android:layout_height="28dp"
+            android:layout_marginLeft="25dp"
+            android:layout_marginTop="29dp"
+            android:background="@drawable/flecha_atras"
+            android:orientation="horizontal" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="25dp"
+            android:layout_marginLeft="25dp"
+            android:text="Tatiana Chamorro"
+            android:textColor="@color/white"
+            android:textSize="25dp"
+            android:textStyle="bold"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_margin="20dp">
+
+        <ImageView
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:background="@drawable/imagen"/>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:background="@drawable/chat_privado_azul_background"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="20dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingTop="5dp"
+                android:paddingStart="10dp"
+                android:paddingBottom="5dp"
+                android:paddingRight="5dp"
+                android:text="Hola Miguel, ese cachorro es mío, podrias ayudarme?" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="02:20pm"
+                android:layout_gravity="right"
+                android:layout_marginRight="20dp"
+                android:textSize="12dp"
+                android:layout_marginBottom="5dp"/>
+        </LinearLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="20dp"
+        android:layout_marginRight="20dp"
+        android:paddingLeft="140dp"
+        android:layout_marginLeft="20dp"
+        >
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/chat_privado_background"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingStart="10dp"
+                android:paddingTop="5dp"
+                android:paddingBottom="5dp"
+                android:paddingRight="5dp"
+                android:text="Hola Eduardo. Claro, muestrame fotos de tu cachorro y con gusto te ayudaré." />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="right"
+                android:layout_marginRight="20dp"
+                android:layout_marginBottom="5dp"
+                android:text="02:25pm"
+                android:textSize="12dp" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_margin="20dp">
+
+        <ImageView
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:background="@drawable/imagen"/>
+
+        <LinearLayout
+            android:layout_width="43dp"
+            android:layout_height="32dp"
+            android:foreground="@drawable/puntos_suspensivos"
+            android:orientation="vertical"
+            android:layout_marginTop="15dp"
+            android:layout_marginLeft="15dp"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="74dp"
+        android:orientation="horizontal"
+        android:layout_marginTop="200dp">
+        <LinearLayout
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:foreground="@drawable/camara"
+            android:orientation="vertical"
+            android:layout_marginTop="15dp"
+            android:layout_marginLeft="10dp">
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="15dp"
+            android:foreground="@drawable/recording_voice"
+            android:orientation="vertical">
+        </LinearLayout>
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="42dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="15dp"
+            android:layout_marginRight="10dp"
+            android:background="@drawable/escribir_background"
+            android:paddingStart="10sp"
+            android:text="Escribir..."
+            android:textColor="@color/white"
+            android:drawableEnd="@drawable/send_message"
+            android:paddingEnd="10sp">
+        </EditText>
+        </LinearLayout>
+</LinearLayout>
