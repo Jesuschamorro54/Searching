@@ -9,10 +9,48 @@ import com.squareup.picasso.Picasso
 import kotlinx.android.synthetic.main.items_chat.view.*
 import android.content.Intent
 
-class ChatGeneralAdapter(val listachatgeneral:ArrayList<ListaChatGeneral>):RecyclerView.Adapter<ChatGeneralAdapter.ChatHolder>(){
+class ChatGeneralAdapter(val listachatgeneral: (ListaChatGeneral) -> Unit):RecyclerView.Adapter<ChatGeneralAdapter.ChatViewHolder>() {
 
 
-    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ChatHolder {
+    var chats: List<ListaChatGeneral> = emptyList()
+
+    fun setData(list: List<ListaChatGeneral>) {
+        chats = list
+        notifyDataSetChanged()
+    }
+
+    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ChatViewHolder {
+        return ChatViewHolder(
+            LayoutInflater.from(parent.context).inflate(
+                R.layout.items_chat,
+                parent,
+                false
+            )
+        )
+    }
+
+    override fun onBindViewHolder(holder: ChatViewHolder, position: Int) {
+        holder.itemView.tvName.text = chats[position].nombrePersona
+        holder.itemView.tvMensaje.text = chats[position].mensaje
+        holder.itemView.tvHora.text = chats[position].hora
+        Picasso.get().load(chats[position].imagen).into(holder.itemView.ivPerson)
+
+
+
+        holder.itemView.setOnClickListener {
+            listachatgeneral(chats[position])
+        }
+    }
+
+    override fun getItemCount(): Int {
+        return chats.size
+    }
+
+    class ChatViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView)
+
+}
+
+    /*override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ChatHolder {
         val layoutInflater = LayoutInflater.from(parent.context)
         return ChatHolder(layoutInflater.inflate(R.layout.items_chat, parent, false))
     }
@@ -20,7 +58,7 @@ class ChatGeneralAdapter(val listachatgeneral:ArrayList<ListaChatGeneral>):Recyc
     override fun onBindViewHolder(holder: ChatHolder, position: Int) {
         holder.render(listachatgeneral[position])
 
-        holder.itemView.setOnClickListener(object :View.OnClickListener{
+       /* holder.itemView.setOnClickListener(object :View.OnClickListener{
             override fun onClick(v: View?) {
                 val activity=v!!.context as AppCompatActivity
                 //val chatPersonal= activity_chat_personal()
@@ -33,7 +71,7 @@ class ChatGeneralAdapter(val listachatgeneral:ArrayList<ListaChatGeneral>):Recyc
                 //activity.supportFragmentManager.beginTransaction().replace(R.id.id_chat, chatPersonal).addToBackStack(null).commit()
             }
             
-        })
+        })*/
     }
 
     override fun getItemCount(): Int = listachatgeneral.size
@@ -45,5 +83,4 @@ class ChatGeneralAdapter(val listachatgeneral:ArrayList<ListaChatGeneral>):Recyc
             view.tvHora.text = listachatgeneral.hora
             Picasso.get().load(listachatgeneral.imagen).into(view.ivPerson)
         }
-    }
-}
+    }*/
