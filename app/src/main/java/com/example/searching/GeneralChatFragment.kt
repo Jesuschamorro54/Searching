@@ -5,9 +5,11 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.SearchView
 import androidx.recyclerview.widget.RecyclerView
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.google.firebase.firestore.FirebaseFirestore
+import kotlinx.android.synthetic.*
 import kotlinx.android.synthetic.main.fragment_general_chat.*
 import kotlinx.android.synthetic.main.fragment_home.*
 
@@ -19,14 +21,18 @@ class GeneralChatFragment : Fragment(R.layout.fragment_general_chat) {
     private lateinit var chatlist: ArrayList<ListaChatGeneral>
 
 
+
     override fun onCreateView(
+
         inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?
+
     ): View? {
         // Inflate the layout for this fragment
         val root = inflater.inflate(R.layout.fragment_general_chat, container, false)
         chatlist= arrayListOf<ListaChatGeneral>()
         getChatData()
         return root
+
     }
 
     private fun getChatData() {
@@ -56,6 +62,8 @@ class GeneralChatFragment : Fragment(R.layout.fragment_general_chat) {
             adapter=ChatGeneralAdapter(chatlist)
         }
     }
+
+
 
 
 }
