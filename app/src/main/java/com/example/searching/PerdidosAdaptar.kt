@@ -7,7 +7,7 @@ import androidx.recyclerview.widget.RecyclerView
 import com.squareup.picasso.Picasso
 import kotlinx.android.synthetic.main.item_perdidos.view.*
 
-class PerdidosAdapter(val listaPerdidos: List<ListaPerdidos>): RecyclerView.Adapter<PerdidosAdapter.PerdidosHolder>(){
+class PerdidosAdapter(val listaPerdidos: ArrayList<ListaPerdidos>): RecyclerView.Adapter<PerdidosAdapter.PerdidosHolder>(){
 
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): PerdidosHolder {
@@ -23,10 +23,14 @@ class PerdidosAdapter(val listaPerdidos: List<ListaPerdidos>): RecyclerView.Adap
 
     class PerdidosHolder(val view: View): RecyclerView.ViewHolder(view){
         fun render(listaPerdidos:ListaPerdidos){
+            //view.btn_chat.tag = listaPerdidos.email
             view.tvNombre.text= listaPerdidos.nomnbrePersona
             view.tvDescripciontt.text=listaPerdidos.descripciontt
             view.tvDescripcion.text=listaPerdidos.descripcion
-            Picasso.get().load(listaPerdidos.imagen).into(view.ivPerdidos)
+            if(!listaPerdidos.imagen.isEmpty() || listaPerdidos.imagen != ""){
+                Picasso.get().load(listaPerdidos.imagen).into(view.ivPerdidos)
+            }
+
         }
     }
 }

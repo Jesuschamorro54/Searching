@@ -3,12 +3,6 @@ import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Button
-import android.widget.TextView
-import androidx.appcompat.app.AlertDialog
-
-import com.google.firebase.auth.FirebaseAuth
-import kotlinx.android.synthetic.main.login.*
-import kotlinx.android.synthetic.main.sing_up.*
 
 class Login: AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -53,6 +47,5 @@ class Login: AppCompatActivity() {
             putExtra("email", email)
             putExtra("provider", provider.name)
         }
-        startActivity(homeIntent)
     }
 }
