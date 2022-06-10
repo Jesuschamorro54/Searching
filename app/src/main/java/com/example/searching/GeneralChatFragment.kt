@@ -42,7 +42,7 @@ class GeneralChatFragment : Fragment(R.layout.fragment_general_chat) {
     }
 
     private fun initViews(root: View) {
-        var rv = root.findViewById<RecyclerView>(R.id.rvlistaChatGeneral)
+        val rv = root.findViewById<RecyclerView>(R.id.rvlistaChatGeneral)
 
         rv.layoutManager = LinearLayoutManager(activity)
         rv.adapter = ChatGeneralAdapter { chat-> chatSelected(chat) }

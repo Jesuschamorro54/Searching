@@ -31,7 +31,7 @@ class MenuView : AppCompatActivity(), OnMapReadyCallback  {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_menu_view)
 
-        intent.getStringExtra("user")?.let {user = it}
+        intent.getStringExtra("email")?.let {user = it}
 
         createDefaultFragment()
 
@@ -47,7 +47,11 @@ class MenuView : AppCompatActivity(), OnMapReadyCallback  {
                 R.id.nav_home -> {
 
                     // TODO EN ESTA SECCIÓN AGREGAN EL CODIGO PARA PASAR LOS PARAMETROS
-                    // here
+                    val args = Bundle()
+                    args.putString("user", user)
+
+
+                    home.arguments = args
                     //TODO: FIN
 
                     setCurrentFragment(home)  // Aquí se carga la vista que se quiere
@@ -56,7 +60,10 @@ class MenuView : AppCompatActivity(), OnMapReadyCallback  {
                 R.id.nav_add -> {
 
                     // TODO EN ESTA SECCIÓN AGREGAN EL CODIGO PARA PASAR LOS PARAMETROS
-                    // here
+                    val args = Bundle()
+                    args.putString("user", user)
+                    reportView.arguments = args
+
                     //TODO: FIN
 
                     setCurrentFragment(reportView)
@@ -64,8 +71,8 @@ class MenuView : AppCompatActivity(), OnMapReadyCallback  {
                 }
                 R.id.nav_messages -> {
 
-                    var args = Bundle()
-                    args.putString("user", "ofelia.hotmail.com")
+                    val args = Bundle()
+                    args.putString("user", user)
 
 
                     generalChat.arguments = args

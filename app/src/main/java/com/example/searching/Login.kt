@@ -3,6 +3,9 @@ import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Button
+import androidx.appcompat.app.AlertDialog
+import com.google.firebase.auth.FirebaseAuth
+import kotlinx.android.synthetic.main.login.*
 
 class Login: AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -43,9 +46,10 @@ class Login: AppCompatActivity() {
     }
 
     private fun showHome(email:String,provider: ProviderType){
-        val homeIntent = Intent(this, MenuView::class.java).apply {
+        val menu = Intent(this, MenuView::class.java).apply {
             putExtra("email", email)
             putExtra("provider", provider.name)
         }
+        startActivity(menu)
     }
 }
