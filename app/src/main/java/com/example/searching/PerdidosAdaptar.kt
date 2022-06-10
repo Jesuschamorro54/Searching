@@ -23,6 +23,7 @@ class PerdidosAdapter(val listaPerdidos: ArrayList<ListaPerdidos>): RecyclerView
 
     class PerdidosHolder(val view: View): RecyclerView.ViewHolder(view){
         fun render(listaPerdidos:ListaPerdidos){
+            //view.btn_chat.tag = listaPerdidos.email
             view.tvNombre.text= listaPerdidos.nomnbrePersona
             view.tvDescripciontt.text=listaPerdidos.descripciontt
             view.tvDescripcion.text=listaPerdidos.descripcion

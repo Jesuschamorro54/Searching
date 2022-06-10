@@ -47,7 +47,7 @@
                 tools:ignore="RtlSymmetry" />
 
             <EditText
-                android:id="@+id/name"
+                android:id="@+id/nameSingUp"
                 android:layout_width="316dp"
                 android:layout_height="50dp"
                 android:background="@drawable/custom_edittetext"

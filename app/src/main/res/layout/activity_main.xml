@@ -44,6 +44,7 @@
 
             <Button
 
+                android:id="@+id/facebookbuttom"
                 android:layout_width="280dp"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
@@ -51,15 +52,16 @@
                 android:background="@drawable/button_facebook"
                 android:drawableLeft="@drawable/facebook"
                 android:fontFamily="@font/robotomedium"
+                android:paddingLeft="9dp"
+                android:paddingRight="10dp"
                 android:text="   Continue con facebook"
                 android:textColor="@color/white"
                 android:textSize="17dp"
-                android:paddingLeft="9dp"
-                android:paddingRight="10dp"
                 tools:ignore="UsingOnClickInXml" />
 
             <Button
 
+                android:id="@+id/googleButton"
                 android:layout_width="280dp"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"

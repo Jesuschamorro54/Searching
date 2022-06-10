@@ -9,9 +9,9 @@ import androidx.recyclerview.widget.LinearLayoutManager
 import com.google.firebase.firestore.FirebaseFirestore
 import android.content.Intent
 import androidx.recyclerview.widget.RecyclerView
+
 import kotlinx.android.synthetic.main.activity_chat_general.view.*
 import kotlinx.android.synthetic.main.fragment_general_chat.rvlistaChatGeneral
-
 import java.util.*
 
 
@@ -21,7 +21,11 @@ class GeneralChatFragment : Fragment(R.layout.fragment_general_chat) {
     private var layoutManager: RecyclerView.LayoutManager? = null
     private val db = FirebaseFirestore.getInstance()
     private var adapter: RecyclerView.Adapter<ChatGeneralAdapter.ChatViewHolder>? = null
+
     private var user = ""
+
+    private lateinit var chatlist: ArrayList<ListaChatGeneral>
+    private var user=""
 
 
     override fun onCreateView(
