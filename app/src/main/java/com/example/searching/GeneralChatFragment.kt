@@ -9,6 +9,7 @@ import androidx.recyclerview.widget.LinearLayoutManager
 import com.google.firebase.firestore.FirebaseFirestore
 import kotlinx.android.synthetic.main.fragment_general_chat.*
 import android.content.Intent
+import androidx.recyclerview.widget.RecyclerView
 import java.util.*
 
 class GeneralChatFragment : Fragment(R.layout.fragment_general_chat) {
@@ -21,14 +22,6 @@ class GeneralChatFragment : Fragment(R.layout.fragment_general_chat) {
 
 
 
-    private var user = ""
-
-    val listachatgeneral:List<ListaChatGeneral> = listOf(
-        ListaChatGeneral(nombrePersona="Tatiana Chamorro", mensaje = "Lo encontré en el parque...",  hora = "02:30pm", imagen = "https://images.pexels.com/photos/6453920/pexels-photo-6453920.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500"),
-        ListaChatGeneral(nombrePersona="Julián Gómez", mensaje = "Lo encontré en el parque...", hora = "10:00am", imagen = "https://www.blogdelfotografo.com/wp-content/uploads/2020/02/apoyado6-2-scaled.jpg"),
-        ListaChatGeneral(nombrePersona="Andrea Casallas", mensaje = "Lo encontré en el parque...", hora = "03:05pm", imagen = "https://ichef.bbci.co.uk/news/300/cpsprodpb/AB7F/production/_115330934_evelina_cabrera.jpg"),
-    )
-
 
     override fun onCreateView(
 
@@ -37,11 +30,7 @@ class GeneralChatFragment : Fragment(R.layout.fragment_general_chat) {
     ): View? {
         // Inflate the layout for this fragment
 
-        val args = arguments
-        if (args != null) {
-            user = args.getString("user", user)
-            println(user)
-        }
+
 
 
         val root = inflater.inflate(R.layout.fragment_general_chat, container, false)
