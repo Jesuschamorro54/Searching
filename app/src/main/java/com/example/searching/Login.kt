@@ -9,11 +9,43 @@ class Login: AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.login)
 
-        val to_access = this.findViewById<Button>(R.id.button_login)
+       login_()
+    }
+     private fun login_(){
+        button_login.setOnClickListener {
+            if (user.text.isNotEmpty() &&  password.text.isNotEmpty() ){
+                    FirebaseAuth.getInstance().signInWithEmailAndPassword(user.text.toString(),password.text.toString()).addOnCompleteListener {
+                        if(it.isSuccessful){
+                            showHome(it.result?.user?.email ?: "", ProviderType.BASIC)
+                        }else{
+                            showAlert("Se ha producido un error autenticando al usuario (NO EXISTE)")
+                        }
+                    }
 
-        to_access.setOnClickListener {
-            val homeView = Intent(this, MenuView::class.java)
-            startActivity(homeView)
+            }else{
+                showAlert("hay campos vacios")
+            }
+
+        }
+         forgotPassword.setOnClickListener{
+             val passwordView = Intent(this, PasswordReset::class.java)
+             startActivity(passwordView)
+         }
+    }
+
+    private fun showAlert(mensaje:String){
+        val builder= AlertDialog.Builder(this)
+        builder.setTitle("Error")
+        builder.setMessage(mensaje)
+        builder.setPositiveButton("aceptar", null)
+        val dialog:AlertDialog= builder.create()
+        dialog.show()
+    }
+
+    private fun showHome(email:String,provider: ProviderType){
+        val homeIntent = Intent(this, MenuView::class.java).apply {
+            putExtra("email", email)
+            putExtra("provider", provider.name)
         }
     }
 }
