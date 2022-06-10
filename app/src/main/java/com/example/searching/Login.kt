@@ -15,9 +15,6 @@ class Login: AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.login)
 
-
-
-
        login_()
     }
      private fun login_(){
