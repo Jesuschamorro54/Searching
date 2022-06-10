@@ -25,7 +25,6 @@ class GeneralChatFragment : Fragment(R.layout.fragment_general_chat) {
     private var user = ""
 
     private lateinit var chatlist: ArrayList<ListaChatGeneral>
-    private var user=""
 
 
     override fun onCreateView(

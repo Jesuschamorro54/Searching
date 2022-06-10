@@ -2,7 +2,6 @@ package com.example.searching
 
 data class ListaChatGeneral(
     val id: String = "",
-    val id:String="",
     val nombrePersona: String ="",
     val mensaje: String="",
     val hora: String="",
