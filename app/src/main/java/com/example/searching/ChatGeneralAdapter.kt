@@ -1,5 +1,6 @@
 package com.example.searching
 
+import android.annotation.SuppressLint
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -8,14 +9,18 @@ import androidx.recyclerview.widget.RecyclerView
 import com.squareup.picasso.Picasso
 import kotlinx.android.synthetic.main.items_chat.view.*
 import android.content.Intent
+import kotlinx.android.synthetic.main.fragment_general_chat.view.*
 
-class ChatGeneralAdapter(val listachatgeneral: (ListaChatGeneral) -> Unit):RecyclerView.Adapter<ChatGeneralAdapter.ChatViewHolder>() {
+class ChatGeneralAdapter(val clickChat: (ListaChatGeneral) -> Unit):RecyclerView.Adapter<ChatGeneralAdapter.ChatViewHolder>() {
 
 
-    var chats: List<ListaChatGeneral> = emptyList()
+    private var chats: List<ListaChatGeneral> = emptyList()
 
+    @SuppressLint("NotifyDataSetChanged")
     fun setData(list: List<ListaChatGeneral>) {
+        println("SET DATA(): ")
         chats = list
+        println(chats)
         notifyDataSetChanged()
     }
 
@@ -30,6 +35,7 @@ class ChatGeneralAdapter(val listachatgeneral: (ListaChatGeneral) -> Unit):Recyc
     }
 
     override fun onBindViewHolder(holder: ChatViewHolder, position: Int) {
+        println("onBindViewHolder(): ")
         holder.itemView.tvName.text = chats[position].nombrePersona
         holder.itemView.tvMensaje.text = chats[position].mensaje
         holder.itemView.tvHora.text = chats[position].hora
@@ -38,7 +44,7 @@ class ChatGeneralAdapter(val listachatgeneral: (ListaChatGeneral) -> Unit):Recyc
 
 
         holder.itemView.setOnClickListener {
-            listachatgeneral(chats[position])
+            clickChat(chats[position])
         }
     }
 
