@@ -12,11 +12,8 @@ class Login: AppCompatActivity() {
         val to_access = this.findViewById<Button>(R.id.button_login)
 
         to_access.setOnClickListener {
-            val menuView = Intent(this, MenuView::class.java)
-
-            menuView.putExtra("user", "jesusfeli54@gmail.com")
-            startActivity(menuView)
-            finish()
+            val homeView = Intent(this, MenuView::class.java)
+            startActivity(homeView)
         }
     }
 }

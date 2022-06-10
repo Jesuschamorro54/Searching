@@ -20,6 +20,7 @@ import kotlin.collections.ArrayList
 import android.content.Intent
 
 
+
 class HomeFragment : Fragment(R.layout.fragment_home) {
 
     private val db = FirebaseFirestore.getInstance()
@@ -91,6 +92,7 @@ class HomeFragment : Fragment(R.layout.fragment_home) {
             layoutManager= LinearLayoutManager(activity)
             adapter=PerdidosAdapter(reportlist)
         }
+
     }
 
     private fun newChat(otherMail:String){
