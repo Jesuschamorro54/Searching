@@ -79,7 +79,6 @@ class HomeFragment : Fragment(R.layout.fragment_home) {
                 reportlist.add(report)
             }
 
-
             printViewHome()
 
         }

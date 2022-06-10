@@ -65,7 +65,8 @@ class MenuView : AppCompatActivity(), OnMapReadyCallback  {
                 R.id.nav_messages -> {
 
                     var args = Bundle()
-                    args.putString("user", "ofelondo@hotmail.com")
+                    args.putString("user", "ofelia.hotmail.com")
+
 
                     generalChat.arguments = args
                   
