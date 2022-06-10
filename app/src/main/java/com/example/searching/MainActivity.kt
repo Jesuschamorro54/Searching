@@ -9,6 +9,7 @@ import android.os.Bundle
 import android.widget.TextView
 import androidx.appcompat.app.AlertDialog
 import androidx.core.content.edit
+import com.facebook.AccessToken
 import com.facebook.CallbackManager
 import com.facebook.FacebookCallback
 import com.facebook.FacebookException
@@ -27,7 +28,7 @@ import kotlinx.android.synthetic.main.activity_main.*
 import kotlinx.android.synthetic.main.login.*
 
 
-class MainActivity : AppCompatActivity() {
+class   MainActivity : AppCompatActivity() {
     private val GOOGL_SIGN_IN= 100
     private val callbackManager = CallbackManager.Factory.create()
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -70,11 +71,12 @@ class MainActivity : AppCompatActivity() {
         }
         facebookbuttom.setOnClickListener {
             LoginManager.getInstance().logInWithReadPermissions(this,listOf("email"))
+
             LoginManager.getInstance().registerCallback(callbackManager,
             object : FacebookCallback<LoginResult>{
                 override fun onSuccess(result: LoginResult?) {
                    result?.let {
-                       val token= it.accessToken
+                       val token :AccessToken= it.accessToken
 
                        val credential : AuthCredential = FacebookAuthProvider.getCredential(token.token)
                        FirebaseAuth.getInstance().signInWithCredential(credential).addOnCompleteListener {
@@ -92,7 +94,7 @@ class MainActivity : AppCompatActivity() {
                 }
 
                 override fun onError(error: FacebookException?) {
-                    showAlert("Se ha producido un error autenticando al usuario")
+                    showAlert("Se ha producido un error autenticando al usuario (onError) $error")
                 }
             })
         }

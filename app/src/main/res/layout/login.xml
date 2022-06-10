@@ -99,7 +99,7 @@
                 tools:ignore="UsingOnClickInXml"
                 android:textSize="17dp"/>
             <TextView
-                android:id="@+id/forgot_password"
+                android:id="@+id/forgotPassword"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="¿Olvidó su contraseña?"
